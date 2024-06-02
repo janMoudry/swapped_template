@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary: #112378;
+	--primary-light: #e8ecfc;
+	--primary-dark: #131c47;
+
+	--secondary: #fbeccf;
+	--secondary-light: #fcf7ed;
+	--secondary-dark: #805d18;
+}
+
+/* * {
+	outline: 1px dotted black;
+} */
+
+button:active {
+	opacity: 0.5;
+}
+
+.blur {
+	filter: blur(40px);
+}
+
+.blur-2 {
+	filter: blur(20px);
+}
+
+.text-gradient {
+	background: linear-gradient(90deg, #11237899, #131c47);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.modal-show {
+	animation: backdropBlur 0.5s forwards;
+}
+
+@keyframes backdropBlur {
+	from {
+		backdrop-filter: blur(0);
+		background-color: rgba(0, 0, 0, 0);
+	}
+	to {
+		backdrop-filter: blur(12px);
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
